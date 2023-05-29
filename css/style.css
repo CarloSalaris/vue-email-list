@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 #app {
     width: 100vw;
     height: 100vh;
