@@ -22,30 +22,29 @@
 <!-- VueJS -->
 <div id="app">
 
-    <h1>GENERATORE DI INDIRIZZI EMAIL</h1>
-
-    <div id="generatedEmails">
-        <ul v-if="randomEmails.length === numRandomEmails">
-            <li
-            v-for="randomEmail in randomEmails">
-                <a href="mailto:{{randomEmail}}">{{randomEmail}}</a>
-            </li>
-        </ul>
-        <!-- ...altrimenti visualizza: -->
-        <span v-else>WAITING TO GENERATE...</span>
+    <div class="container">
+        <h1>GENERATORE DI INDIRIZZI EMAIL</h1>
+        <div id="generatedEmails">
+            <ul v-if="randomEmails.length === numRandomEmails">
+                <li
+                v-for="randomEmail in randomEmails">
+                    <a href="mailto:{{randomEmail}}">{{randomEmail}}</a>
+                </li>
+            </ul>
+            <!-- ...altrimenti visualizza: -->
+            <span v-else>WAITING TO GENERATE...</span>
+        </div>
+        <!-- Number of email to generate -->
+        <input type="number"
+            min="1"
+            placeholder="Inserisci il numero di email da generare..."
+            v-model="numRandomEmails"
+            @keyup.enter="generateEmail()">
+        <br>
+        <button
+        @click="generateEmail()">GENERA</button>
+        </div>
     </div>
-
-    <!-- Number of email to generate -->
-    <input type="number"
-        min="1"
-        placeholder="Inserisci il numero di email da generare..."
-        v-model="numRandomEmails"
-        @keyup.enter="generateEmail()">
-    <br>
-
-    <button
-    @click="generateEmail()">GENERA</button>
-</div>
 
 
 <!-- JS Files  -->
