@@ -11,7 +11,7 @@
 #app {
     width: 100vw;
     height: 100vh;
-    padding: 30px;
+    padding: 60px 30px;
     background-color: cadetblue;
     text-align: center;
 }
@@ -19,7 +19,7 @@
 #generatedEmails {
     width: 50%;
     min-width: max-content;
-    max-width: 1000px;
+    max-width: 615px;
     height: 70%;
     max-height: 500px;
     padding: 30px;
