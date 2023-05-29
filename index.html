@@ -25,14 +25,23 @@
     <h1>GENERATORE DI INDIRIZZI EMAIL</h1>
 
     <div id="generatedEmails">
-        <ul>
+        <ul v-if="randomEmails.length === numRandomEmails">
             <li
-            v-if="randomEmails.length === 10"
             v-for="randomEmail in randomEmails">
                 <a href="mailto:{{randomEmail}}">{{randomEmail}}</a>
             </li>
         </ul>
+        <!-- ...altrimenti visualizza: -->
+        <span v-else>WAITING TO GENERATE...</span>
     </div>
+
+    <!-- Number of email to generate -->
+    <input type="number"
+        min="1"
+        placeholder="Inserisci il numero di email da generare..."
+        v-model="numRandomEmails"
+        @keyup.enter="generateEmail()">
+    <br>
 
     <button
     @click="generateEmail()">GENERA</button>

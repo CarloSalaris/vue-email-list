@@ -51,10 +51,16 @@ ul {
             color: black;
         }
 
+input {
+    width: 280px;
+    padding: 10px 0;
+    text-align: center;
+}
+
 button {
     padding: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin: auto 20px;
+    margin: 20px;
 }

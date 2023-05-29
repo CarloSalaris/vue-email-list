@@ -12,6 +12,7 @@ const{createApp} = Vue
 createApp({
     data(){
         return {
+            numRandomEmails: 10,
             randomEmails: [],
         }
     },
@@ -20,7 +21,7 @@ createApp({
             //svuota array
             this.randomEmails.length = 0;
             // ciclo per generare 10 email random
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < this.numRandomEmails; i++) {
                 //tramite una API generare una email random
                 axios
                 .get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -31,6 +32,7 @@ createApp({
                 );    
             }
             console.log(this.randomEmails);
+            console.log(this.numRandomEmails);
         }
     },
     mounted() {
