@@ -34,17 +34,8 @@ createApp({
         }
     },
     mounted() {
-        // creare un ciclo per generare 10 email random
-        for (let i = 0; i < 10; i++) {
-            //tramite una API generare una email random
-            axios
-            .get('https://flynn.boolean.careers/exercises/api/random/mail')
-            .then(
-                response => {
-                    this.randomEmails.push(response.data.response);
-                }
-            );    
-        }
+        this.generateEmail()
+
         console.log(this.randomEmails);
         
         console.log("ho caricato l'app");
