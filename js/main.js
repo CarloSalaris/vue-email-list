@@ -9,7 +9,7 @@ const{createApp} = Vue
 createApp({
     data(){
         return {
-            //code
+            randomEmail: '',
         }
     },
     methods: {
@@ -23,7 +23,8 @@ createApp({
         .get('https://flynn.boolean.careers/exercises/api/random/mail')
         .then(
             response => {
-                console.log(response.data.response);
+                this.randomEmail = response.data.response;
+                console.log(this.randomEmail);
             }
         );
         console.log("ho caricato l'app");
