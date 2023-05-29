@@ -7,3 +7,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+#generatedEmails {
+    width: 50%;
+    min-width: max-content;
+    max-width: 1000px;
+    height: 70%;
+    max-height: 500px;
+    padding: 30px;
+    margin: 50px auto;
+    background-color:rgb(255, 248, 238);
+    text-align: center;
+    overflow-y: scroll;
+
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+li {
+    margin: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
