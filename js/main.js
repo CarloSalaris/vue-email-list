@@ -16,8 +16,21 @@ createApp({
         }
     },
     methods: {
-        methodName() {
-            //code
+        generateEmail() {
+            //svuota array
+            this.randomEmails.length = 0;
+            // ciclo per generare 10 email random
+            for (let i = 0; i < 10; i++) {
+                //tramite una API generare una email random
+                axios
+                .get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then(
+                    response => {
+                        this.randomEmails.push(response.data.response);
+                    }
+                );    
+            }
+            console.log(this.randomEmails);
         }
     },
     mounted() {
