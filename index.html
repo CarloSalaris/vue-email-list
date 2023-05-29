@@ -10,12 +10,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>vue-email-list</title>
 </head>
 <body>
 <!-- VueJS -->
-<div id="app">{{message}}</div>
+<div id="app">
+    <ul>
+        <li
+        v-for="randomEmail in randomEmails">
+            {{randomEmail}}
+        </li>
+    </ul>
+</div>
 
 
 <!-- JS Files  -->
